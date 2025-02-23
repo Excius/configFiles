@@ -257,3 +257,7 @@ bar {
 	workspace_buttons yes
 }
 include /etc/sway/config.d/*
+
+#4A2574
+client.focused #924DBF #000000 #FFFFFF #000000 #924DBF
+client.unfocused #555555 #000000 #FFFFFF #000000 #555555
