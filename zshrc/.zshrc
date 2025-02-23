@@ -260,14 +260,15 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+export GDK_SCALE=1
+export GDK_DPI_SCALE=0.8
 
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/hunk.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-export PATH="$PATH:/opt/nvim-linux64/bin"
 
-export JAVA_HOME=/usr/lib/jvm/jdk-22.0.2-oracle-x64
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH=/usr/local/nodejs/bin:$PATH
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go

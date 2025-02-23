@@ -1,0 +1,10 @@
+[appearance]
+width=750
+height=400
+xoffset=590
+yoffset=100
+orientation=vertical
+show-icons=true
+allow-images=true
+insensitive=true
+term=alacritty
