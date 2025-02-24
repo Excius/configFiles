@@ -3,3 +3,16 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
+
+vim.filetype.add({
+  extension = {
+    env = "env",
+  },
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "env",
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})

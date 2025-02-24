@@ -28,7 +28,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.local/share/backgroud/halo.webp fill
+output * bg ~/.local/share/backgroud/halo.jpg fill
 #
 # Example configuration:
 #
@@ -86,7 +86,7 @@ output * bg ~/.local/share/backgroud/halo.webp fill
     bindsym $mod+d exec $menu
 
     # Lock screen
-	  bindsym $mod+Shift+s exec swaylock -C $HOME/.swaylock/config
+	  bindsym $mod+Shift+s exec swaylock -C $HOME/.config/swaylock/config
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
