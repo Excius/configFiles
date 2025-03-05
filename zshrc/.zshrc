@@ -248,6 +248,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias n="nvim"
+
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
