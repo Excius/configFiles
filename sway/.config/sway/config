@@ -28,7 +28,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.local/share/backgroud/digital-art-isolated-house.jpg fill
+output * bg ~/.local/share/backgroud/astronaut_floating.png fill
 #
 # Example configuration:
 #
