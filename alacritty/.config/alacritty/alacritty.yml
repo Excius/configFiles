@@ -4,9 +4,6 @@ env:
 window:
   opacity: 0.8
 
-graphics:
-  backend: "gl"
-
 font:
   size: 11.0
   bold:
