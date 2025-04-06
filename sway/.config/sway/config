@@ -121,9 +121,9 @@ output * bg ~/.local/share/backgroud/beautiful-anime-landscape-cartoon-scene.jpg
     # Mute/Unmute
     bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     # Media playerctl  
-	  bindsym XF86AudioNext exec wpctl next
-	  bindsym XF86AudioPrev exec wpctl previous
-	  bindsym XF86AudioPlay exec wpctl play-pause
+	  bindsym XF86AudioNext exec playerctl  next
+	  bindsym XF86AudioPrev exec playerctl previous
+	  bindsym XF86AudioPlay exec playerctl play-pause
 
 #
 # Brightness control:

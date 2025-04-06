@@ -16,3 +16,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.b.autoformat = false
   end,
 })
+
+-- vim.opt.tabstop = 2 -- Number of visual spaces per TAB
+-- vim.opt.shiftwidth = 2 -- Number of spaces for each autoindent
