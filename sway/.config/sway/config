@@ -21,14 +21,29 @@ set $term alacritty
 
 set $menu wofi --show drun | xargs swaymsg exec --
 
+set $XDG_CURRENT_DESKTOP sway
+
+exec_always --no-startup-id ~/.config/sway/start-keyring.sh
+
 include /etc/sway/config-vars.d/*
 
 
+### GTK-Theme
+#
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+  gsettings set $gnome-schema gtk-theme "Adwaita-dark"
+  gsettings set $gnome-schema icon-theme "Adwaita"
+  gsettings set $gnome-schema cursor-theme "Adwaita"
+}
+
+#
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.local/share/backgroud/beautiful-anime-landscape-cartoon-scene.jpg fill
+output * bg ~/.local/share/backgroud/digital-art-style-illustration-thunderstorm.jpg fill
 #
 # Example configuration:
 #

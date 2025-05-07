@@ -264,6 +264,7 @@ fi
 
 export GDK_SCALE=1
 export GDK_DPI_SCALE=0.8
+export QT_SCALE_FACTOR=0.8
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
