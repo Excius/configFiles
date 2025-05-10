@@ -28,14 +28,17 @@
         "spacing": 10
     },
     "clock#1": {
+    "interval": 60,
     "format": "{:%a}",      // Display day (Mon, Tue, etc.)
     "tooltip": false
     },
     "clock#2": {
+    "interval": 1,
     "format": "{:%H:%M}",   // Display time in HH:MM
     "tooltip": false
     },
     "clock#3": {
+    "interval": 60,
     "format": "{:%m-%d}",   // Display date in MM-DD
     "tooltip": false
     },
@@ -55,7 +58,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol"
     },
 	"custom/power": {

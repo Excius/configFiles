@@ -33,7 +33,7 @@ include /etc/sway/config-vars.d/*
 set $gnome-schema org.gnome.desktop.interface
 
 # starting notification service
-# exec mako
+exec swaync
 
 exec_always {
   gsettings set $gnome-schema gtk-theme "Adwaita-dark"
@@ -46,7 +46,7 @@ exec_always {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.local/share/backgroud/digital-art-style-illustration-thunderstorm.jpg fill
+output * bg ~/backgroud/digital-art-style-illustration-thunderstorm.jpg fill
 #
 # Example configuration:
 #

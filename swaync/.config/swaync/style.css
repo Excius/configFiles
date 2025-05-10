@@ -1,0 +1,32 @@
+* {
+  font-family: "Sans", "Noto Sans", sans-serif;
+  font-size: 14px;
+}
+
+window {
+  background-color: rgba(40, 80, 120, 0.5); /* light blue with 50% opacity */
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 150, 200, 0.4);
+  padding: 10px;
+}
+
+.notification {
+  background-color: rgba(30, 60, 90, 0.7);
+  border-left: 4px solid #66ccff;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.title,
+.dnd,
+.button,
+.notification .body {
+  color: #e0f7ff;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
