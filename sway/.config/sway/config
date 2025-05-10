@@ -33,7 +33,7 @@ include /etc/sway/config-vars.d/*
 set $gnome-schema org.gnome.desktop.interface
 
 # starting notification service
-exec mako
+# exec mako
 
 exec_always {
   gsettings set $gnome-schema gtk-theme "Adwaita-dark"

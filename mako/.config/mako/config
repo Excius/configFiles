@@ -1,3 +1,9 @@
+
+width=400
+height=200
+padding=10
+margin=10
+text-alignment=center
 sort=-time
 layer=overlay
 background-color=#002f4b80
