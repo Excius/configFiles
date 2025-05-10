@@ -1,0 +1,21 @@
+sort=-time
+layer=overlay
+background-color=#002f4b80
+border-size=2
+border-color=#1e90ff
+border-radius=12
+default-timeout=5000
+ignore-timeout=1
+font=MesloLGS Nerd Font 12
+
+[urgency=low]
+background-color=#002f4b80
+border-color=#1e90ff
+
+[urgency=high]
+background-color=#1e90ff
+border-color=#4682b4
+default-timeout=0
+
+[category=mpd]
+group-by=category

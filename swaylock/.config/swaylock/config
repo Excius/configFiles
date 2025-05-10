@@ -8,3 +8,10 @@ indicator-caps-lock
 
 # Behavior
 show-failed-attempts
+
+ring-color=5e81ac
+key-hl-color=88c0d0
+line-color=00000000
+inside-color=00000088
+separator-color=00000000
+font=MesloLGS Nerd Font 10
