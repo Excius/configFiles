@@ -264,7 +264,6 @@ fi
 
 export GDK_SCALE=1
 export GDK_DPI_SCALE=0.8
-export QT_SCALE_FACTOR=0.8
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
@@ -278,3 +277,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export TERMINAL=alacritty
+
+
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=24
