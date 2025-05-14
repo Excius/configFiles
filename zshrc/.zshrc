@@ -265,12 +265,16 @@ fi
 export GDK_SCALE=1
 export GDK_DPI_SCALE=0.8
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT6CT_PLATFORMTHEME=qt6ct
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH=/usr/local/nodejs/bin:$PATH
+export PATH=/usr/local/node/bin:$PATH
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
@@ -278,6 +282,10 @@ export PATH=$PATH:$GOPATH/bin
 
 export TERMINAL=alacritty
 
-
-export XCURSOR_THEME=Adwaita
-export XCURSOR_SIZE=24
+export WLR_NO_HARDWARE_CURSORS=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __GL_GSYNC_ALLOWED=0
+export __GL_SYNC_TO_VBLANK=0
+export __GL_VRR_ALLOWED=0
+wa
+:q

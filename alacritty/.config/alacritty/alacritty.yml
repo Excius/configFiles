@@ -18,6 +18,8 @@ font:
   normal:
     family: "MesloLGS Nerd Font"
     style: "Regular"
+  fallback:
+    - "Noto Color Emoji"
 
 colors:
   primary:
