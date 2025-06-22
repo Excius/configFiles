@@ -273,3 +273,6 @@ export PATH=/usr/local/node/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+
+setopt NO_BEEP
