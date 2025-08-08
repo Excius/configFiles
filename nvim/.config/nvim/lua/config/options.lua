@@ -5,16 +5,16 @@
 vim.g.snacks_animate = false
 
 vim.filetype.add({
-  extension = {
-    env = "env",
-  },
+	extension = {
+		env = "env",
+	},
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "env",
-  callback = function()
-    vim.b.autoformat = false
-  end,
+	pattern = "env",
+	callback = function()
+		vim.b.autoformat = false
+	end,
 })
 
 -- vim.opt.tabstop = 2 -- Number of visual spaces per TAB
