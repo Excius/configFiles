@@ -1,0 +1,57 @@
+# ~/.dircolors
+
+# Configuration for ls colors
+# Syntax: <filetype or extension> <color code>
+
+# Directories
+DIR 01;31   # Bold red
+
+# Symbolic links
+LINK 01;36  # Bold cyan
+
+# Sockets
+SOCK 01;35  # Bold magenta
+
+# Pipes
+FIFO 40;33  # Yellow background
+
+# Executable files
+EXEC 01;32  # Bold green
+
+# Block devices
+BLK 40;33;01
+
+# Character devices
+CHR 40;33;01
+
+# Orphaned symbolic links
+ORPHAN 01;05;37;41
+
+# Missing files
+MISSING 01;05;37;41
+
+# Set extensions colors
+.tar 01;34
+.tgz 01;34
+.zip 01;34
+.gz 01;34
+.bz2 01;34
+.xz 01;34
+
+.jpg 01;35
+.jpeg 01;35
+.png 01;35
+.gif 01;35
+
+.html 01;33
+.htm 01;33
+
+.c 01;34
+.cpp 01;34
+.py 01;34
+.java 01;34
+
+.conf 00;36
+
+# Regular files (default)
+NORMAL 00
