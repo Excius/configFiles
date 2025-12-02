@@ -1,8 +1,0 @@
-Server: bandit.labs.overthewire.org
-Pass (bandit0): bandit0
-Pass (bandit1): ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
-Pass (bandit2): 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
-Pass (bandit3): MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
-Pass (bandit4): 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
-Pass (bandit5): 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
-
