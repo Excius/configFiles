@@ -1,5 +1,9 @@
+
 # ~/.zshrc for interactive shells
 
+# -------------------------
+# Shell options (interactive)
+# -------------------------
 setopt autocd
 setopt interactivecomments
 setopt magicequalsubst
@@ -7,11 +11,14 @@ setopt nonomatch
 setopt notify
 setopt numericglobsort
 setopt promptsubst
+setopt NO_BEEP
 
 WORDCHARS=${WORDCHARS//\/}
 PROMPT_EOL_MARK=""
 
+# -------------------------
 # Key bindings
+# -------------------------
 bindkey -e
 bindkey ' ' magic-space
 bindkey '^U' backward-kill-line
@@ -25,22 +32,38 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[Z' undo
 
+# Optional: accept autosuggestion with Right-Arrow
+# Uncomment if you want Right-Arrow to accept suggestions (may conflict with other completion)
+# bindkey '^[[C' autosuggest-accept
+
+# -------------------------
 # Minimal completion setup
+# -------------------------
 autoload -Uz compinit
 compinit -C
 
-# History settings
+# -------------------------
+# History settings (improved for autosuggestions)
+# -------------------------
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
+HISTSIZE=10000
+SAVEHIST=20000
+
+# Make history immediately available to other shells and autosuggestions
+setopt INC_APPEND_HISTORY    # append commands to the history file immediately
+setopt SHARE_HISTORY         # share history across all sessions
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
 
 alias history="history 0"
 
+# -------------------------
 # Prompt configuration
+# -------------------------
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -97,7 +120,9 @@ precmd() {
     fi
 }
 
+# -------------------------
 # ls, less, grep coloring and handy aliases
+# -------------------------
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:"
@@ -127,29 +152,57 @@ alias la='ls -A'
 alias l='ls -CF'
 alias n='nvim'
 
-# Inline autosuggestions only
+# -------------------------
+# Autosuggestions & syntax highlighting (order matters!)
+# -------------------------
+# Set strategy and style BEFORE sourcing the plugin.
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
+
+# Source autosuggestions first
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
+elif [ -f "${HOME}/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+    source "${HOME}/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
-# Command-not-found
-if [ -f /etc/zsh_command_not_found ]; then
-    . /etc/zsh_command_not_found
+# Source syntax highlighting last
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [ -f "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+    source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
+# -------------------------
 # Oh-My-Posh prompt
+# -------------------------
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
+# -------------------------
 # FZF defaults
+# -------------------------
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
+# -------------------------
 # PATH additions
+# -------------------------
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=/usr/local/node/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-setopt NO_BEEP
+# -------------------------
+# Misc
+# -------------------------
+# Command-not-found helper
+if [ -f /etc/zsh_command_not_found ]; then
+    . /etc/zsh_command_not_found
+fi
+
+# Inline autosuggestions only (this is a fallback path check)
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    # already sourced above, but keep for compatibility
+    :
+fi
 
