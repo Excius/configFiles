@@ -151,6 +151,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias n='nvim'
+alias lg='lazygit'
 
 # -------------------------
 # Autosuggestions & syntax highlighting (order matters!)
@@ -186,9 +187,9 @@ export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 # -------------------------
 # PATH additions
 # -------------------------
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH=/usr/local/node/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin" # nvim path
+export PATH=/usr/local/node/bin:$PATH # node path
+export PATH=$PATH:/usr/local/go/bin # go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 

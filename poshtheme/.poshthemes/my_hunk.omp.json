@@ -13,7 +13,7 @@
           "leading_diamond": "\ue0b6",
           "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "foreground": "#ffffff",
-          "background": "#c44569",
+          "background": "#c678dd",
           "type": "os"
         },
         {
@@ -24,7 +24,7 @@
           "template": "{{ .Path }} ",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
-          "background": "#c44569",
+          "background": "#c678dd",
           "type": "path"
         },
         {
@@ -123,7 +123,7 @@
         },
         {
           "style": "plain",
-          "template": "<#c44569>❯</>",
+          "template": "<#c678dd>❯</>",
           "foreground": "#ffffff",
           "type": "text"
         }
