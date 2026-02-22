@@ -105,6 +105,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # -------------------------
 # Autosuggestions & syntax highlighting (order matters!)
 # -------------------------
@@ -136,6 +139,13 @@ eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 # -------------------------
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 eval "$(fzf --zsh)"
+
+# -------------------------
+# TMUX reattach
+# -------------------------
+if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+    tmux new-session -A -s dev
+fi
 
 # -------------------------
 # PATH additions
