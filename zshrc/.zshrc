@@ -183,6 +183,7 @@ eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 # FZF defaults
 # -------------------------
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+eval "$(fzf --zsh)"
 
 # -------------------------
 # PATH additions
