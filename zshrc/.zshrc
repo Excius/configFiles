@@ -62,65 +62,6 @@ setopt HIST_FIND_NO_DUPS
 alias history="history 0"
 
 # -------------------------
-# Prompt configuration
-# -------------------------
-TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
-
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-PROMPT_ALTERNATIVE=twoline
-NEWLINE_BEFORE_PROMPT=yes
-
-configure_prompt() {
-    prompt_symbol=㉿
-    case "$PROMPT_ALTERNATIVE" in
-        twoline)
-            PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
-            ;;
-        oneline)
-            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n@%m%b%F{reset}:%B%F{%(#.blue.green)}%~%b%F{reset}%(#.#.$) '
-            RPROMPT=
-            ;;
-        backtrack)
-            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{red}%n@%m%b%F{reset}:%B%F{blue}%~%b%F{reset}%(#.#.$) '
-            RPROMPT=
-            ;;
-    esac
-    unset prompt_symbol
-}
-
-if [ "$color_prompt" = yes ]; then
-    VIRTUAL_ENV_DISABLE_PROMPT=1
-    configure_prompt
-else
-    PROMPT='${debian_chroot:+($debian_chroot)}%n@%m:%~%(#.#.$) '
-fi
-
-toggle_oneline_prompt(){
-    if [ "$PROMPT_ALTERNATIVE" = oneline ]; then
-        PROMPT_ALTERNATIVE=twoline
-    else
-        PROMPT_ALTERNATIVE=oneline
-    fi
-    configure_prompt
-    zle reset-prompt
-}
-zle -N toggle_oneline_prompt
-bindkey ^P toggle_oneline_prompt
-
-precmd() {
-    if [ "$NEWLINE_BEFORE_PROMPT" = yes ]; then
-        if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
-            _NEW_LINE_BEFORE_PROMPT=1
-        else
-            print ""
-        fi
-    fi
-}
-
-# -------------------------
 # ls, less, grep coloring and handy aliases
 # -------------------------
 if [ -x /usr/bin/dircolors ]; then
@@ -152,6 +93,17 @@ alias la='ls -A'
 alias l='ls -CF'
 alias n='nvim'
 alias lg='lazygit'
+
+alias gc="git commit -m"
+alias gp="git push origin HEAD"
+alias gpu="git pull origin"
+alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias gdiff="git diff"
+alias gco="git checkout"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # -------------------------
 # Autosuggestions & syntax highlighting (order matters!)
