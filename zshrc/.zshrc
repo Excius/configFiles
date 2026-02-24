@@ -143,9 +143,10 @@ eval "$(fzf --zsh)"
 # -------------------------
 # TMUX reattach
 # -------------------------
-if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-    tmux new-session -A -s dev
-fi
+# if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+#     tmux new-session -A -s dev
+# fi
+alias t='tmux new-session -A -s dev'
 
 # -------------------------
 # PATH additions
