@@ -1,0 +1,88 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "right",
+    "sticky_scroll": false,
+    "scrollbar": {
+      "show": "never",
+    },
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "buffer_font_weight": 400.0,
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+  },
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "enable_next_edit_suggestions": false,
+    },
+    "provider": "copilot",
+  },
+  "helix_mode": false,
+  "agent": {
+    "dock": "left",
+    "default_profile": "write",
+    "default_model": {
+      "effort": "medium",
+      "provider": "copilot_chat",
+      "model": "gpt-5.2-codex",
+      "enable_thinking": true,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "terminal": {
+    "font_size": 13.0,
+  },
+  "colorize_brackets": true,
+  "tab_size": 2,
+  "show_wrap_guides": true,
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_size": 14.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "MesloLGS Nerd Font",
+  "ui_font_family": "MesloLGS Nerd Font",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 13.0,
+  "theme": "Aura Dark",
+  "theme_overrides": {
+    "Aura Dark": {
+      "border.variant": "#15141C",
+      "border": "#15141C",
+      "title_bar.background": "#15141C",
+    },
+  },
+}

@@ -105,6 +105,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# Zed alias
+alias zed='WAYLAND_DISPLAY="" zed'
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -171,3 +174,11 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     :
 fi
 
+
+# pnpm
+export PNPM_HOME="/home/excius/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
