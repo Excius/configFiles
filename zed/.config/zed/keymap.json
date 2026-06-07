@@ -19,6 +19,12 @@
     },
   },
   {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "project_panel::Toggle",
+    },
+  },
+  {
     "context": "vim_mode == normal && !menu",
     "bindings": {
       // ===== Core navigation =====
@@ -28,7 +34,7 @@
       "space s": "project_symbols::Toggle",
 
       // ===== Panels =====
-      "space e": "project_panel::ToggleFocus",
+      "space e": "project_panel::Toggle",
       "space o": "outline::Toggle",
       "alt-h": "workspace::ActivatePaneLeft",
       "alt-j": "workspace::ActivatePaneDown",
@@ -38,6 +44,7 @@
       // ===== Buffers (files) =====
       "shift-l": "pane::ActivateNextItem",
       "shift-h": "pane::ActivatePreviousItem",
+      "space b d": "pane::CloseActiveItem",
 
       // ===== Window management =====
       "space w v": "pane::SplitVertical",

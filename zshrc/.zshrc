@@ -106,7 +106,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Zed alias
-alias zed='WAYLAND_DISPLAY="" zed'
+# alias zed='WAYLAND_DISPLAY="" zed'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
