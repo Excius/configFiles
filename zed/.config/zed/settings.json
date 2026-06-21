@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  "prettier": {
+    "parser": ""
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": false,
+      "max_severity": null,
+    },
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true,
+    },
+    "disable_git": false,
+  },
   "project_panel": {
     "dock": "right",
     "sticky_scroll": false,
@@ -34,11 +52,11 @@
   },
   "show_edit_predictions": false,
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "enable_next_edit_suggestions": false,
     },
-    "provider": "copilot",
+    "provider": "zed",
   },
   "helix_mode": false,
   "agent": {

@@ -48,7 +48,9 @@
 
       // ===== Window management =====
       "space w v": "pane::SplitVertical",
+      "space |": "pane::SplitVertical",
       "space w s": "pane::SplitHorizontal",
+      "space -": "pane::SplitHorizontal",
       "space w h": "workspace::ActivatePaneLeft",
       "space w j": "workspace::ActivatePaneDown",
       "space w k": "workspace::ActivatePaneUp",
