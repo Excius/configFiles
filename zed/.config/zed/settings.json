@@ -8,10 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "vim": {
-    "toggle_relative_line_numbers": true
+    "toggle_relative_line_numbers": true,
   },
   "prettier": {
-    "parser": ""
+    "parser": "",
   },
   "diagnostics": {
     "inline": {
