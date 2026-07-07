@@ -52,11 +52,12 @@
   },
   "show_edit_predictions": false,
   "edit_predictions": {
+    "allow_data_collection": "no",
     "mode": "subtle",
     "copilot": {
       "enable_next_edit_suggestions": false,
     },
-    "provider": "zed",
+    "provider": "copilot",
   },
   "helix_mode": false,
   "agent": {

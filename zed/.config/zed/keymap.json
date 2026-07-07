@@ -35,6 +35,7 @@
 
       // ===== Panels =====
       "space e": "project_panel::Toggle",
+      "space g g": "git_panel::Toggle",
       "space o": "outline::Toggle",
       "alt-h": "workspace::ActivatePaneLeft",
       "alt-j": "workspace::ActivatePaneDown",

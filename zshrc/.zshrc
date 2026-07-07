@@ -155,10 +155,11 @@ alias t='tmux new-session -A -s dev'
 # PATH additions
 # -------------------------
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin" # nvim path
-export PATH=/usr/local/node/bin:$PATH # node path
-export PATH=$PATH:/usr/local/go/bin # go path
+export PATH="$HOME/.local/npm/bin:$PATH" # node path
+export PATH=/opt/go/bin:$PATH# go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/.local/bin:$PATH
 
 # -------------------------
 # Misc
@@ -174,11 +175,10 @@ if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     :
 fi
 
-
 # pnpm
 export PNPM_HOME="/home/excius/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
