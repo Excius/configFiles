@@ -37,10 +37,10 @@
       "space e": "project_panel::Toggle",
       "space g g": "git_panel::Toggle",
       "space o": "outline::Toggle",
-      "alt-h": "workspace::ActivatePaneLeft",
-      "alt-j": "workspace::ActivatePaneDown",
-      "alt-k": "workspace::ActivatePaneUp",
-      "alt-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
 
       // ===== Buffers (files) =====
       "shift-l": "pane::ActivateNextItem",
@@ -67,10 +67,10 @@
   {
     "context": "Workspace",
     "bindings": {
-      "alt-h": "workspace::ActivatePaneLeft",
-      "alt-j": "workspace::ActivatePaneDown",
-      "alt-k": "workspace::ActivatePaneUp",
-      "alt-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
     },
   },
 ]

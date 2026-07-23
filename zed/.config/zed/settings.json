@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "on",
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": false,
   "vim": {
     "toggle_relative_line_numbers": true,
   },
@@ -57,7 +60,7 @@
     "copilot": {
       "enable_next_edit_suggestions": false,
     },
-    "provider": "copilot",
+    "provider": "zed",
   },
   "helix_mode": false,
   "agent": {
@@ -73,6 +76,7 @@
     "model_parameters": [],
   },
   "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
     "font_size": 13.0,
   },
   "colorize_brackets": true,
@@ -81,8 +85,8 @@
   "agent_ui_font_size": 16.0,
   "agent_buffer_font_size": 14.0,
   "buffer_line_height": "comfortable",
-  "buffer_font_family": "MesloLGS Nerd Font",
-  "ui_font_family": "MesloLGS Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
