@@ -6,9 +6,8 @@ SYSTEM_FILE="/usr/share/applications/discord.desktop"
 TMP_DIR="/tmp/discord.deb"
 
 echo "Downloading latest Discord package"
-wget -O "$TMP_DIR" "$DISCORD_URL"
 
-if [ $? -ne 0 ]; then
+if ! wget -O "$TMP_DIR" "$DISCORD_URL"; then
   echo "Failed to download Discord package"
   exit 1
 fi

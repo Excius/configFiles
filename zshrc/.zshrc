@@ -96,6 +96,7 @@ alias lg='lazygit'
 
 alias gc="git commit -m"
 alias gp="git push origin HEAD"
+alias gr="git rebase"
 alias gpu="git pull origin"
 alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(red)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
 alias gdiff="git diff"
@@ -106,7 +107,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Zed alias
-# alias zed='WAYLAND_DISPLAY="" zed'
+alias zed='WAYLAND_DISPLAY="" zed'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

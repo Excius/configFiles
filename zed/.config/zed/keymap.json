@@ -33,6 +33,9 @@
       "space /": "pane::DeploySearch",
       "space s": "project_symbols::Toggle",
 
+      // ===== GoTo navigation =====
+      "g r": "editor::FindAllReferences",
+
       // ===== Panels =====
       "space e": "project_panel::Toggle",
       "space g g": "git_panel::Toggle",
