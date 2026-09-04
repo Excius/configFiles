@@ -139,6 +139,11 @@ fi
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 
 # -------------------------
+# Yazi
+# -------------------------
+alias y="yazi"
+
+# -------------------------
 # FZF defaults
 # -------------------------
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
