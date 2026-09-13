@@ -144,6 +144,11 @@ eval "$(oh-my-posh init zsh --config ~/.poshthemes/my_hunk.omp.json)"
 alias y="yazi"
 
 # -------------------------
+# Batcat
+# -------------------------
+alias bat="batcat"
+
+# -------------------------
 # FZF defaults
 # -------------------------
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
