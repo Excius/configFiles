@@ -58,6 +58,7 @@ export LANG=en_US.UTF-8
 # Environment variables
 # -------------------------
 export GOPATH="$HOME/go"
+export NPM_HOME="$HOME/.local/npm"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export BUN_INSTALL="$HOME/.bun"
 
@@ -67,6 +68,7 @@ typeset -U path PATH
 # Preserve the existing PATH order after adding preferred user tools.
 path=(
     "$BUN_INSTALL/bin"
+    "$NPM_HOME/bin"
     "$PNPM_HOME/bin"
     "$HOME/.local/bin"
     $path
@@ -187,3 +189,6 @@ if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
 elif [[ -r "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
     source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
+
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
